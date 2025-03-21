@@ -4,21 +4,33 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import './index.css';
 
+import Footer from './component/Footer/Footer';
+import Header from './component/Header/Header';
+import Home from './component/Home/Home';
+import './index.css';
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <div>Hello world!</div>,
+    element: <Home></Home>,
+    children:[
+      {
+        path:"/header",
+        element:<Header></Header>
+      },
+      {
+        path:"/Footer",
+        element:<Footer></Footer>
+      }
+    ]
   },
-  {
-    path:"Home",
-    element:<div>Bushra not like animal</div>
-  }
 ]);
+
+
+
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <RouterProvider router={router}></RouterProvider>
+   <RouterProvider router={router}></RouterProvider>
   </StrictMode>,
 )
