@@ -1,12 +1,14 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
+
 import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
 
-import Footer from './component/Footer/Footer';
-import Header from './component/Header/Header';
+import About from './component/About/About';
+import Contract from './component/Contract/Contract';
+import Data from './component/Data_m/Data';
 import Home from './component/Home/Home';
 import './index.css';
 const router = createBrowserRouter([
@@ -15,13 +17,20 @@ const router = createBrowserRouter([
     element: <Home></Home>,
     children:[
       {
-        path:"/header",
-        element:<Header></Header>
+        path:"/Data",
+        element:<Data></Data>
       },
       {
-        path:"/Footer",
-        element:<Footer></Footer>
+        path:"/Contract",
+        element:<Contract></Contract>
+      },
+      {
+        path:"/About",
+        element:<About></About>
       }
+      
+      
+     
     ]
   },
 ]);
