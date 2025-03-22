@@ -12,6 +12,7 @@ const Header = () => {
                 <Link className='style1' to={'/Data'}>Data</Link>
                 <Link className='style1' to={'/Contract'}>Contract</Link>
                 <Link className='style1' to={'/About'}>About</Link>
+                <Link className='style1' to={'/Users'}>Users</Link>
             </ul>
             
         </div>
