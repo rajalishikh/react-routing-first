@@ -18,9 +18,8 @@ const User = ({item}) => {
             <button>Click me</button>
             </Link>
             <button onClick={handleDetails}>Previous page </button>
-
             
-        </div>
+          </div>
     );
 };
 

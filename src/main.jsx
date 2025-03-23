@@ -9,6 +9,7 @@ import {
 import About from './component/About/About';
 import Contract from './component/Contract/Contract';
 import Data from './component/Data_m/Data';
+import Error from './component/ErrorPage/Error';
 import Home from './component/Home/Home';
 import Post from './component/Post/Post';
 import PostUnique from './component/PostUnique/PostUnique';
@@ -19,6 +20,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Home></Home>,
+    errorElement:<Error></Error>,
     children:[
       {
         path:"/Data",
