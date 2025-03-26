@@ -4,10 +4,14 @@ import './postDetails.css';
 const PostDetails = ({item}) => {
     const{title,body,id}=item
     const navigate=useNavigate()
+    const navigate2=useNavigate()
 
     function handleDetails(){
         navigate(`/PostDetails/${id}`)
 
+    }
+    function navigate2Handle(){
+        navigate2(`/PostDetails/${id}`)
     }
     return (
         <div className='postD'>
@@ -17,6 +21,7 @@ const PostDetails = ({item}) => {
             <button>Post Details</button>
             </Link>
             <button onClick={handleDetails} >See Details</button>
+            <button onClick={navigate2Handle}>Use Navigate</button>
             
             
         </div>
